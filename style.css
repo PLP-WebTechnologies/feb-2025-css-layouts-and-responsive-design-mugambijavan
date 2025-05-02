@@ -1,0 +1,90 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px; /* Spacing between main and sidebar */
+}
+
+main {
+    flex: 3; /* Takes up more space */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside {
+    flex: 1; /* Takes up less space */
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky; /* Stick to the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; /* Stack main and aside vertically */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
+
+/* Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        flex-direction: row; /* Keep main and aside side-by-side */
+    }
+
+    nav ul {
+        justify-content: space-around; /* Distribute navigation items */
+    }
+}
+
+/* Desktop (1024px and above) - No specific changes needed for this basic layout */
